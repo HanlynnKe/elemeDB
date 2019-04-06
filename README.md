@@ -10,18 +10,18 @@
 
    - 首先把settings.py里的设置给改了，如下：
    
-   ```
-   DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 你的数据库名称,
-        'USER': 访问mysql数据库的用户名,
-        'PASSWORD': 访问mysql数据库的密码,
-        'HOST': '127.0.0.1',
-        'PORT': '3306'
-    }
-   }
-   ```
+      ```
+      DATABASES = {
+       'default': {
+           'ENGINE': 'django.db.backends.mysql',
+           'NAME': 你的数据库名称,
+           'USER': 访问mysql数据库的用户名,
+           'PASSWORD': 访问mysql数据库的密码,
+           'HOST': '127.0.0.1',
+           'PORT': '3306'
+       }
+      }
+      ```
    
    - 然后就是新建一个app
    
@@ -29,7 +29,7 @@
    
       `python3 manage.py inspectdb > ./app/models.py`
       
-      如果数据库很大，表很多，请参考：
+   - 如果数据库很大，表很多，请参考：
       
       https://medium.com/cashify-engineering/generating-django-models-from-a-database-f4d03883cc5b
       
@@ -39,5 +39,4 @@
    
    - 建议手写（笑）
    
-   - 和models.py里的代码有点类似，但只需要声明db_column、 primary_key、blank、null的参数就可以了，
-   注意要有class Meta以及声明db_table
+   - 和models.py里的代码有点类似，但只需要声明db_column、 primary_key、blank、null的参数就可以了，注意要有class Meta以及声明db_table
