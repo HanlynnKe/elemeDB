@@ -68,10 +68,12 @@ class ElemedbUser(models.Model):
     userphone = models.CharField(db_column='userPhone', max_length=11)  # Field name made lowercase.
     logincode = models.CharField(db_column='loginCode', max_length=16)  # Field name made lowercase.
     paycode = models.CharField(db_column='payCode', max_length=6)  # Field name made lowercase.
+    userid = models.CharField(db_column='userID', max_length=24)  # Field name made lowercase.
 
     class Meta:
         managed = False
         db_table = 'elemedb_user'
+        unique_together = (('userid', 'username'),)
 
 
 class ElemedbUseraddr(models.Model):
