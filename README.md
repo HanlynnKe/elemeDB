@@ -27,7 +27,9 @@
    
    - 在settings.py里面添加完app以后就是导入models.py
    
-      `python3 manage.py inspectdb > ./app/models.py`
+      ```
+      python3 manage.py inspectdb > ./app/models.py
+      ```
       
    - 如果数据库很大，表很多，请参考：
       
