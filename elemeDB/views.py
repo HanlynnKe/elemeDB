@@ -1,6 +1,7 @@
-from django.shortcuts import render, HttpResponseRedirect, HttpResponse
+from django.shortcuts import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate
+from django.db import connection
 from dbms.view_models import *
 import json
 
@@ -44,33 +45,35 @@ def handle(request):
             if mode == '1':
                 # 简便方法
                 users = ElemedbViewUser.objects.filter(username=user)
-                # rawSQL方法
-                # sql = ''
-                # orders = ElemedbViewOrder.objects.raw(, [restaurant])
 
                 # 准备response信息
                 for name in users:
                     items.append(name.username)
                 for item in items:
                     target = ElemedbViewUser.objects.get(username=item)
-                    print(target.username)
-                    print(target.userphone)
                     op = {
                         'name': target.username,
                         'tel': target.userphone
                     }
+                    # rawSQL方法 --- 分组嵌套查询
+                    cursor = connection.cursor()
+                    sql = 'SELECT COUNT(userName) FROM view_fav GROUP BY userName HAVING userName = %s'
+                    cursor.execute(sql, [user])
+                    fav_counts = cursor.fetchone()
+                    for fav in fav_counts:
+                        op['fav'] = fav
+                    print(op)
                     user_dic.append(op)
             # 查询用户收藏
             if mode == '2':
-                # 简便方法
-                users = ElemedbViewFav.objects.filter(username=user)
-                # rawSQL方法
-                # sql = ''
-                # orders = ElemedbViewOrder.objects.raw(, [restaurant])
-
+                # rawSQL方法 --- 嵌套查询
+                cursor = connection.cursor()
+                sql = 'SELECT * FROM view_fav HAVING username = %s'
+                cursor.execute(sql, [user])
+                users = cursor.fetchall()
                 # 准备response信息
                 for name in users:
-                    items.append(name.rstrtname)
+                    items.append(name[1])
                 for item in items:
                     target = ElemedbViewFav.objects.get(username=user, rstrtname=item)
                     op = {
@@ -83,15 +86,19 @@ def handle(request):
                     user_dic.append(op)
             # 查询用户地址簿
             if mode == '3':
-                # 简便方法
-                users = ElemedbViewUserAddr.objects.filter(user_username=user)
-                # rawSQL方法
-                # sql = ''
-                # orders = ElemedbViewOrder.objects.raw(, [restaurant])
+                # # 简便方法
+                # users = ElemedbViewUserAddr.objects.filter(user_username=user)
+                # rawSQL方法 --- 连接查询
+                cursor = connection.cursor()
+                sql = 'select addressCode, contact, gender, address, phone, tag, user_username ' \
+                      'from view_useraddress vua natural join view_user vu ' \
+                      'where vua.user_userName = vu.userName and vu.userName = %s'
+                cursor.execute(sql, [user])
+                users = cursor.fetchall()  # 返回的是一个个tuple
 
                 # 准备response信息
                 for name in users:
-                    items.append(name.addresscode)
+                    items.append(name[0])
                 for item in items:
                     target = ElemedbViewUserAddr.objects.get(user_username=user, addresscode=item)
                     op = {
@@ -134,9 +141,6 @@ def handle(request):
             if mode == '5':
                 # 简便方法
                 dishes = ElemedbViewMenu.objects.filter(rstrtname=restaurant)
-                # rawSQL方法
-                # sql = ''
-                # orders = ElemedbViewOrder.objects.raw(, [restaurant])
 
                 for dish in dishes:
                     items.append(dish.dishname)

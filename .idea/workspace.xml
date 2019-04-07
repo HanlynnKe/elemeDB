@@ -6,9 +6,6 @@
       <change afterPath="$PROJECT_DIR$/frontend/src/views/Login.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/frontend/src/views/Main.vue" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/frontend/src/views/Read.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbms/view_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/dbms/view_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/elemeDB/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/elemeDB/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/elemeDB/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/elemeDB/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
@@ -33,10 +30,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/src/views/Read.vue">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/Welcome.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+            <state relative-caret-position="211">
+              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -67,6 +64,7 @@
         <option value="$PROJECT_DIR$/dbms/view_models.py" />
         <option value="$PROJECT_DIR$/elemeDB/views.py" />
         <option value="$PROJECT_DIR$/frontend/src/views/Read.vue" />
+        <option value="$PROJECT_DIR$/frontend/src/components/Welcome.vue" />
       </list>
     </option>
   </component>
@@ -254,20 +252,20 @@
       <workItem from="1554453902005" duration="275000" />
       <workItem from="1554466461364" duration="164000" />
       <workItem from="1554471928955" duration="1002000" />
-      <workItem from="1554531003228" duration="22756000" />
+      <workItem from="1554531003228" duration="28923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32348000" />
+    <option name="totallyTimeSpent" value="38515000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="720" y="23" width="720" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="npm" sideWeight="0.27370304" side_tool="true" weight="0.27876106" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.72629696" visible="true" weight="0.27876106" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.40250447" visible="true" weight="0.27876106" />
+      <window_info id="Structure" order="1" sideWeight="0.59749556" side_tool="true" weight="0.27876106" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -280,7 +278,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3297362" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3297362" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.3297362" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -387,13 +385,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/MainHeader.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-77">
-          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/elemeDB/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -413,25 +404,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dbms/view_models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
+        <state relative-caret-position="290">
           <caret line="51" column="92" selection-start-line="51" selection-start-column="92" selection-end-line="51" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/views/Read.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="264" column="21" lean-forward="true" selection-start-line="264" selection-start-column="21" selection-end-line="264" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/elemeDB/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="141" column="43" selection-start-line="141" selection-start-column="43" selection-end-line="141" selection-end-column="43" />
+        <state relative-caret-position="537">
+          <caret line="64" column="29" lean-forward="true" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
           <folding>
             <element signature="e#0#71#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/views/Read.vue">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/MainHeader.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        <state relative-caret-position="324">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/Welcome.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
         </state>
       </provider>
     </entry>
