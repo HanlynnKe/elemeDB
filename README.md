@@ -51,3 +51,25 @@
      this.$router.go(0)
      ```
      但是可能会出现页面卡顿的情况，不过既然是django自己的页面，目前来看十分顺滑～
+
+- Django使用原生SQL语句
+
+   - 使用所谓的Manager.raw(raw_sql= , params=[], ...)，注意这只能完成SELECT操作
+     网上查了好多可是没有什么比较好的答案，根本不知道主键要放在哪。话不多说，上图：
+     ```
+     sql = 'SELECT * FROM eleme.view_order WHERE ordercode = %s'
+     orders = ElemedbViewOrder.objects.raw(sql, [order_id])
+     ```
+     
+   - 采用游标的方法，不仅能SELECT还可以UPDATE、DELETE、INSERT
+     这里是比较简单的用法，没有什么七七八八的map，我也只用了mysql这么1个数据库。如下：
+     ```
+     from django.db import connection
+     
+     cursor = connection.cursor()
+     sql = 'select addressCode, contact, gender, address, phone, tag, user_username ' \
+           'from view_useraddress vua natural join view_user vu ' \
+           'where vua.user_userName = vu.userName and vu.userName = %s'
+     cursor.execute(sql, [user])
+     users = cursor.fetchall()  # 返回的是一个个tuple
+     ```
