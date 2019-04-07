@@ -1,6 +1,6 @@
 # 哈尔滨工业大学（深圳）- 数据库系统 - 实验3
 
-根据手机上的饿了么软件设计数据库系统，采用 django + mysql 的结构设计后台及DBMS
+根据手机上的饿了么软件设计数据库系统，采用 django + mysql + vue 的结构设计后台及DBMS
 
 其中elemeDB/dbms文件夹中models用于存储仅管理员可视的数据库表，view_models用于存储用户可视的数据库视图
 
@@ -42,3 +42,12 @@
    - 建议手写（笑）
    
    - 和models.py里的代码有点类似，但只需要声明db_column、 primary_key、blank、null的参数就可以了，注意要有class Meta以及声明db_table
+   
+- Vue的admin页面跳转
+
+   - 之前一直不会使用vue跳转到django自带的admin界面，现在会惹。在Vue页面中使用如下代码：
+   
+     ```
+     this.$router.go(0)
+     ```
+     但是可能会出现页面卡顿的情况，不过既然是django自己的页面，目前来看十分顺滑～
