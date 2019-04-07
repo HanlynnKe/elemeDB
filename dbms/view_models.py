@@ -25,7 +25,7 @@ class ElemedbViewUserAddr(models.Model):
 
 
 class ElemedbViewFav(models.Model):
-    username = models.CharField(db_column='userName', max_length=24)
+    username = models.CharField(db_column='userName', max_length=24, primary_key=True)
     rstrtname = models.CharField(db_column='restaurantName', max_length=24)
     deliveryleast = models.IntegerField(db_column='deliveryLeast')
     distance = models.FloatField(db_column='distance')
@@ -39,7 +39,7 @@ class ElemedbViewFav(models.Model):
 class ElemedbViewRstrt(models.Model):
     rstrtname = models.CharField(db_column='restaurantName', primary_key=True, max_length=24)
     rstrtclass = models.CharField(db_column='restaurantClass', max_length=15)
-    rstrtaddr = models.CharField(db_column='restaurantAddr', max_length=96)
+    rstrtaddr = models.CharField(db_column='restaurantAddress', max_length=96)
     rstrtphone = models.CharField(db_column='restaurantPhone', max_length=15)
     wrkinhrsfrom = models.TimeField(db_column='workingHoursFrom')
     wrkinhrsto = models.TimeField(db_column='workingHoursTo')
@@ -49,7 +49,7 @@ class ElemedbViewRstrt(models.Model):
 
 
 class ElemedbViewMenu(models.Model):
-    rstrtname = models.CharField(db_column='restaurantName', max_length=24)
+    rstrtname = models.CharField(db_column='restaurantName', max_length=24, primary_key=True)
     dishname = models.CharField(db_column='dishName', max_length=20)  # Field name made lowercase.
     dishprice = models.FloatField(db_column='dishPrice')  # Field name made lowercase.
     dishsaleamount = models.IntegerField(db_column='SaleAmount')  # Field name made lowercase.
