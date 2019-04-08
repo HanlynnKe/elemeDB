@@ -20,7 +20,7 @@ export default {
         type: "warning"
       })
         .then(() => {
-          this.$router.push({path:"/admin"});
+          this.$router.push({ path: "/admin" });
           this.$router.go(0);
         })
         .catch(() => {
@@ -36,15 +36,17 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-h3 {
-  margin: 40px 0 0;
+h1 {
+  margin-top: 10%;
+  margin-bottom: 5%;
 }
 h6 {
-  margin: 40px 0 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
   cursor: pointer;
   text-decoration: underline;
 }
 #goLog {
-  margin: 20px 0 0;
+  /*margin-top: 5%;*/
 }
 </style>

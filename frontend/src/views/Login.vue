@@ -60,10 +60,14 @@ h1 {
 
 h3 {
   text-align: center;
+  margin: 5% 0 0;
 }
 
 form {
-  margin: 10%;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
   padding-top: 5%;
   padding-bottom: 2%;
   padding-left: 2%;

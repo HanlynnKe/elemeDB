@@ -22,7 +22,7 @@ export default {
 
 <style lang="less">
 #nav {
-  padding: 30px;
+  padding: 2%;
   a {
     font-weight: bold;
     color: #2c3e50;

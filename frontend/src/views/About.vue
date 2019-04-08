@@ -16,7 +16,7 @@
 
 <style lang="less">
 #nav {
-  padding: 30px;
+  padding: 2%;
   a {
     font-weight: bold;
     color: #2c3e50;
@@ -25,9 +25,14 @@
     }
   }
 }
-h3,
+h1 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+h3 {
+  margin-bottom: 2%;
+}
 h5 {
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-bottom: 2%;
 }
 </style>
