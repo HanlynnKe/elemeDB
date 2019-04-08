@@ -21,7 +21,7 @@
                 <el-input v-model="name"></el-input>
               </el-col>
               <el-col span="4">
-                <el-button type="success" v-on:click="searchItem(1)" circle><i class="el-icon-search"></i></el-button>
+                <el-button type="success" v-on:click="searchItem(1)" @keyup.enter.native="searchItem(1)" circle><i class="el-icon-search"></i></el-button>
               </el-col>
             </el-row>
           </el-form-item>
@@ -44,7 +44,7 @@
                 <el-input v-model="name"></el-input>
               </el-col>
               <el-col span="4">
-                <el-button type="success" v-on:click="searchItem(2)" circle><i class="el-icon-search"></i></el-button>
+                <el-button type="success" v-on:click="searchItem(2)" @keyup.enter.native="searchItem(2)" circle><i class="el-icon-search"></i></el-button>
               </el-col>
             </el-row>
           </el-form-item>
@@ -68,7 +68,7 @@
                 <el-input v-model="name"></el-input>
               </el-col>
               <el-col span="4">
-                <el-button type="success" v-on:click="searchItem(3)" circle><i class="el-icon-search"></i></el-button>
+                <el-button type="success" v-on:click="searchItem(3)" @keyup.enter.native="searchItem(3)" circle><i class="el-icon-search"></i></el-button>
               </el-col>
             </el-row>
           </el-form-item>
@@ -94,7 +94,7 @@
                 <el-input v-model="rstrtName"></el-input>
               </el-col>
               <el-col span="4">
-                <el-button type="success" v-on:click="searchItem(4)" circle><i class="el-icon-search"></i></el-button>
+                <el-button type="success" v-on:click="searchItem(4)" @keyup.enter.native="searchItem(4)" circle><i class="el-icon-search"></i></el-button>
               </el-col>
             </el-row>
           </el-form-item>
@@ -120,7 +120,7 @@
                 <el-input v-model="rstrtName"></el-input>
               </el-col>
               <el-col span="4">
-                <el-button type="success" v-on:click="searchItem(5)" circle><i class="el-icon-search"></i></el-button>
+                <el-button type="success" v-on:click="searchItem(5)" @keyup.enter.native="searchItem(5)" circle><i class="el-icon-search"></i></el-button>
               </el-col>
             </el-row>
           </el-form-item>
@@ -144,7 +144,7 @@
                 <el-input v-model="orderID"></el-input>
               </el-col>
               <el-col span="4">
-                <el-button type="success" v-on:click="searchItem(6)" circle><i class="el-icon-search"></i></el-button>
+                <el-button type="success" v-on:click="searchItem(6)" @keyup.enter.native="searchItem(6)" circle><i class="el-icon-search"></i></el-button>
               </el-col>
             </el-row>
           </el-form-item>
